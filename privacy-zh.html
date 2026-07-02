@@ -110,6 +110,9 @@
         <div class="header">
             <div class="logo-placeholder">致敬经典 · 怀念伟人</div>
             <h1>毛选日历 隐私政策</h1>
+            <div style="font-size: 13px; color: #888888; margin-top: 10px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+                隐私版本：v1.1 | 更新日期：2026年7月2日
+            </div>
         </div>
         
         <p>本隐私政策（以下简称“本政策”）阐述了 <strong>李安</strong>（以下简称“我们”）作为 <strong>毛选日历</strong> 移动应用程序（以下简称“本应用”）的开发者，如何处理本应用在您移动设备中运行及请求服务时所涉数据的信息安全规则。</p>
@@ -124,7 +127,7 @@
         <h2>2. 定位权限与实时天气服务（平台细分）</h2>
         <p>当您开启应用内的“实时天气”功能或使用桌面小组件时，本应用会向您请求<strong>地理位置（定位）权限</strong>。我们在不同平台及组件中的处理逻辑如下：</p>
         <ul>
-            <li><strong>Android 设备：</strong>仅限在主应用运行期间处理位置信息。位置数据（经纬度）仅在必要刷新时，通过安全的 HTTPS 加密网络连接瞬时发送至第三方天气服务商（Open-Meteo，官方网站: open-meteo.com）的 API 获取当前天气，我们不进行任何后台持续定位或位置数据存储。</li>
+            <li><strong>Android 设备：</strong>本应用 Android 版本暂不提供天气服务，因此在 Android 设备上，本应用不请求任何位置权限，亦不收集或处理任何地理定位数据。</li>
             <li><strong>iOS 设备与桌面小组件（Widget）：</strong>
                 <ul>
                     <li><strong>主应用与小组件通信：</strong>当您在 iOS 系统中启用本应用时，经纬度信息会以高度安全的本地 App Group 共享机制（Suite: <code>group.xyz.tinglo.Mao4App</code>）在设备本地的 <code>UserDefaults</code> 中同步，以便桌面小组件（MaoWidget）能实时读取。该数据完全留存在设备本地。</li>
@@ -132,7 +135,7 @@
                 </ul>
             </li>
             <div class="highlight">
-                <p><strong>🚨 特别说明与承诺：</strong>“桌面小组件（Widget）及小组件后台天气同步”功能<strong>仅在 iOS 设备上提供与支持</strong>，Android 设备不包含小组件功能。我们绝对不在任何外部云端服务器上收集、记录、储存或回传您的位置轨迹、历史定位信息。您的经纬度数据绝不与您的任何设备标识符（如 IDFA/IMEI）或个人身份进行绑定。</p>
+                <p><strong>🚨 特别说明与承诺：</strong>“实时天气”及“桌面小组件（Widget）后台天气同步”功能<strong>仅在 iOS 设备上提供与支持</strong>，Android 设备暂不提供天气服务。我们绝对不在任何外部云端服务器上收集、记录、储存或回传您的位置轨迹、历史定位信息。您的经纬度数据绝不与您的任何设备标识符（如 IDFA/IMEI）或个人身份进行绑定。</p>
             </div>
         </ul>
 
