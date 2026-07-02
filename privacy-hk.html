@@ -110,6 +110,9 @@
         <div class="header">
             <div class="logo-placeholder">致敬經典 · 懷念偉人</div>
             <h1>毛選日曆 隱私政策</h1>
+            <div style="font-size: 13px; color: #888888; margin-top: 10px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+                隱私版本：v1.1 | 更新日期：2026年7月2日
+            </div>
         </div>
         
         <p>本隱私政策（以下簡稱「本政策」）闡述了 <strong>李安</strong>（以下簡稱「我們」）作為 <strong>毛選日曆</strong> 行動應用程式（以下簡稱「本應用」）的開發者，如何處理本應用在您行動裝置中執行及請求服務時所涉數據的資訊安全規則。</p>
@@ -124,7 +127,7 @@
         <h2>2. 定位權限與即時天氣服務（平台細分）</h2>
         <p>當您開啟應用內的「即時天氣」功能或使用桌面小工具時，本應用會向您請求<strong>地理位置（定位）權限</strong>。我們在不同平台及組件中的處理邏輯如下：</p>
         <ul>
-            <li><strong>Android 裝置：</strong>僅限在主應用程式執行期間處理位置資訊。位置數據（經緯度）僅在必要重新整理時，透過安全的 HTTPS 加密網絡連接瞬時傳送至第三方天氣服務商（Open-Meteo，官方網站: open-meteo.com）的 API 獲取當前天氣，我們不進行任何背景持續定位或位置數據儲存。</li>
+            <li><strong>Android 裝置：</strong>本應用 Android 版本暫不提供天氣服務，因此在 Android 裝置上，本應用不請求任何位置權限，亦不收集或處理任何地理定位數據。</li>
             <li><strong>iOS 裝置與桌面小工具（Widget）：</strong>
                 <ul>
                     <li><strong>主應用程式與小工具通信：</strong>當您在 iOS 系統中啟用本應用時，經緯度資訊會以高度安全的本機 App Group 共享機制（Suite: <code>group.xyz.tinglo.Mao4App</code>）在裝置本機的 <code>UserDefaults</code> 中同步，以便桌面小工具（MaoWidget）能即時讀取。該數據完全留存在裝置本機。</li>
@@ -132,7 +135,7 @@
                 </ul>
             </li>
             <div class="highlight">
-                <p><strong>🚨 特別說明與承諾：</strong>「桌面小工具（Widget）及小工具背景天氣同步」功能<strong>僅在 iOS 裝置上提供與支持</strong>，Android 裝置不包含小工具功能。我們絕對不在任何外部雲端伺服器上收集、記錄、儲存或回傳您的位置軌跡、歷史定位資訊。您的經緯度數據絕不與您的任何裝置識別碼（如 IDFA/IMEI）或個人身分進行綁定。</p>
+                <p><strong>🚨 特別說明與承諾：</strong>「即時天氣」及「桌面小工具（Widget）背景天氣同步」功能<strong>僅在 iOS 裝置上提供與支持</strong>，Android 裝置暫不提供天氣服務。我們絕對不在任何外部雲端伺服器上收集、記錄、儲存或回傳您的位置軌跡、歷史定位資訊。您的經緯度數據絕不與您的任何裝置識別碼（如 IDFA/IMEI）或個人身分進行綁定。</p>
             </div>
         </ul>
 
