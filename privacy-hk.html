@@ -1,171 +1,341 @@
 <!DOCTYPE html>
 <html lang="zh-HK">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>隱私政策 - 毛選日曆</title>
+    <title>用户服務協議與隱私聲明 - 毛選日曆</title>
     <style>
         :root {
-            --primary-color: #8B0000;
-            --accent-color: #B22222;
-            --bg-color: #F9F7F0;
+            /* 玄色主題色僅作為線條與核心邊框顏色 */
+            --xuan-line: #1A1A1A;
+            --xuan-line-muted: #D1D1D6;
+            --bg-color: #FAFAFA;
             --card-bg: #FFFFFF;
-            --text-main: #2C2C2C;
-            --text-muted: #555555;
-            --border-color: #EADBC8;
+            --text-main: #111111;
+            --text-sub: #333333;
+            --text-muted: #666666;
+            --accent-bg: #F5F5F7;
         }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Source Han Serif TC", "Noto Serif CJK TC", "Songti TC", serif;
-            line-height: 1.8;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans SC", sans-serif;
+            line-height: 1.85;
             color: var(--text-main);
             background-color: var(--bg-color);
             margin: 0;
             padding: 40px 20px;
         }
+
         .container {
-            max-width: 800px;
+            max-width: 860px;
             margin: 0 auto;
             background: var(--card-bg);
-            padding: 50px 40px;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(139, 0, 0, 0.05);
-            border: 1px solid var(--border-color);
+            padding: 52px 48px;
+            border-radius: 8px;
+            border: 1px solid var(--xuan-line);
         }
+
         .header {
             text-align: center;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 30px;
-            margin-bottom: 35px;
+            border-bottom: 1px solid var(--xuan-line);
+            padding-bottom: 32px;
+            margin-bottom: 40px;
         }
-        .logo-placeholder {
-            font-size: 24px;
-            font-weight: bold;
-            color: var(--primary-color);
-            margin-bottom: 10px;
+
+        .header-tag {
+            display: inline-block;
+            font-size: 12px;
             letter-spacing: 2px;
+            color: var(--text-main);
+            border: 1px solid var(--xuan-line);
+            padding: 4px 16px;
+            border-radius: 20px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            background-color: #FFFFFF;
         }
+
         h1 {
-            color: var(--primary-color);
-            margin: 0;
+            color: var(--text-main);
+            margin: 0 0 12px 0;
             font-size: 28px;
             letter-spacing: 1px;
+            font-weight: 700;
         }
-        h2 {
-            color: var(--primary-color);
-            margin-top: 35px;
-            font-size: 20px;
-            border-left: 4px solid var(--accent-color);
-            padding-left: 15px;
-            letter-spacing: 0.5px;
-        }
-        p, li {
-            font-size: 15px;
+
+        .version-info {
+            font-size: 13px;
             color: var(--text-muted);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        .notice-callout {
+            border: 1px solid var(--xuan-line);
+            background-color: var(--accent-bg);
+            padding: 20px 24px;
+            margin-bottom: 36px;
+            border-radius: 6px;
+        }
+
+        .notice-callout-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .notice-callout-title::before {
+            content: "■";
+            font-size: 10px;
+            margin-right: 8px;
+            color: var(--xuan-line);
+        }
+
+        .notice-callout p {
+            margin: 0;
+            font-size: 13.5px;
+            color: var(--text-sub);
+            line-height: 1.75;
+        }
+
+        h2 {
+            color: var(--text-main);
+            margin-top: 40px;
+            margin-bottom: 18px;
+            font-size: 19px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px dashed var(--xuan-line-muted);
+            padding-bottom: 8px;
+        }
+
+        h2::before {
+            content: "";
+            display: inline-block;
+            width: 7px;
+            height: 14px;
+            background-color: var(--xuan-line);
+            margin-right: 12px;
+        }
+
+        h3 {
+            font-size: 15.5px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-top: 22px;
+            margin-bottom: 10px;
+        }
+
+        p,
+        li {
+            font-size: 14.5px;
+            color: var(--text-sub);
             text-align: justify;
         }
-        ul {
-            padding-left: 20px;
+
+        ul,
+        ol {
+            padding-left: 24px;
+            margin-top: 8px;
+            margin-bottom: 18px;
         }
+
         li {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
-        .highlight {
-            background-color: #FDF6EC;
-            border-left: 3px solid #E6A23C;
-            padding: 12px 16px;
-            margin: 20px 0;
+
+        code {
+            font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+            font-size: 13px;
+            background-color: #F0F0F2;
+            padding: 2px 6px;
             border-radius: 4px;
+            border: 1px solid #E0E0E5;
         }
-        .highlight p {
+
+        .line-box {
+            border: 1px solid var(--xuan-line);
+            padding: 20px 24px;
+            margin: 28px 0;
+            border-radius: 6px;
+            background: #FFFFFF;
+        }
+
+        .line-box-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+        }
+
+        .line-box-title::before {
+            content: "❖";
+            margin-right: 8px;
+            font-size: 12px;
+        }
+
+        .line-box p {
             margin: 0;
             font-size: 14px;
-            color: #7D5D3B;
+            color: var(--text-sub);
         }
+
+        .legal-highlight {
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
         .footer {
             text-align: center;
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border-color);
+            margin-top: 56px;
+            padding-top: 28px;
+            border-top: 1px solid var(--xuan-line);
             font-size: 13px;
-            color: #999999;
+            color: var(--text-muted);
         }
+
         @media (max-width: 600px) {
             body {
-                padding: 20px 10px;
+                padding: 16px 10px;
             }
+
             .container {
-                padding: 30px 20px;
+                padding: 28px 20px;
+                border-radius: 6px;
             }
+
             h1 {
-                font-size: 24px;
+                font-size: 22px;
             }
+
             h2 {
-                font-size: 18px;
+                font-size: 17px;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="header">
-            <div class="logo-placeholder">致敬經典 · 懷念偉人</div>
-            <h1>毛選日曆 隱私政策</h1>
-            <div style="font-size: 13px; color: #888888; margin-top: 10px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
-                隱私版本：v1.1 | 更新日期：2026年7月2日
+            <div class="header-tag">毛選日曆 · 隱私保護與服務協議</div>
+            <h1>用户服務協議與隱私聲明</h1>
+            <div class="version-info">
+                文件版本號：v2.0 | 生效與發佈日期：2026年8月3日
             </div>
         </div>
-        
-        <p>本隱私政策（以下簡稱「本政策」）闡述了 <strong>李安</strong>（以下簡稱「我們」）作為 <strong>毛選日曆</strong> 行動應用程式（以下簡稱「本應用」）的開發者，如何處理本應用在您行動裝置中執行及請求服務時所涉數據的資訊安全規則。</p>
 
-        <h2>1. 核心理念與離線執行</h2>
-        <p>本應用以保障用戶隱私為根本出發點。本應用之所有核心功能，包括每日金句展示、干支與農曆換算、偏好主題渲染以及您的個人想法記錄，均<strong>在您的行動裝置本機安全運算與儲存</strong>。</p>
+        <div class="notice-callout">
+            <div class="notice-callout-title">重要提示與法律須知</div>
+            <p>歡迎使用<strong>毛選日曆</strong>移動應用程序（以下簡稱“本應用”或“我們”）。為切實保障您的合法權利與個人信息安全，請您在開啓本應用或使用 AI
+                思想對話服務前，仔細閲讀並充分理解本《用户服務協議與隱私聲明》（以下簡稱“本協議”）。當您使用本應用或點擊“同意並繼續”時，即視為您已全面理解並同意接受本協議的全部條款。</p>
+        </div>
+
+        <h2>一、 導言與協議法律適用範圍</h2>
+        <p>1.1 本協議是您（以下或稱“用户”）與本應用開發者（以下簡稱“我們”）之間就使用本應用提供的軟件功能、本地數據服務以及遠端 AI 思想對話服務所訂立的具有法律約束力的正式契約。</p>
+        <p>1.2 本協議涵蓋本應用在各移動操作系統平台（包括但不限於 iOS、Android）上運行的全部功能組件，包括主應用界面、桌面小組件（Widget）、本地數據庫及相關加密通信接口。</p>
+
+        <h2>二、 客户端本地私有化存儲主導原則</h2>
+        <p>2.1 <span class="legal-highlight">絕對本地私有化原則：</span>本應用除明確告知的雲端 AI
+            思想對話實時交互服務及極微量加密授信狀態外，<strong>用户的所有個人數據與使用痕跡均 100% 保存在用户自身的移動設備本地沙盒存儲中</strong>。</p>
+        <p>2.2 本地存儲的數據範圍包括但不限於：</p>
         <ul>
-            <li><strong>無用戶帳戶：</strong>本應用無需註冊或建立任何網路帳戶即可使用，因此絕不收集您的姓名、電話號碼、電子郵件等個人身分識別資料。</li>
-            <li><strong>本機私有化想法：</strong>您的日常想法及歷史記錄完全依託裝置本機的私有沙盒儲存進行保存，不存在任何向雲端同步或上傳的行為。</li>
+            <li>用户撰寫並保存的個人思考感悟、隨筆與日誌；</li>
+            <li>用户的語錄收藏列表、閲讀歷史及日曆翻閲記錄；</li>
+            <li>用户的個性化主題偏好、字號設定及交互配置；</li>
+            <li>本地日曆撕頁算法引擎計算得出的歷史日期狀態數據。</li>
         </ul>
+        <p>2.3 上述本地數據完全歸用户個人私有控制，我們不會向任何雲端服務器、第三方平台或外部機構上傳、同步或備份您的任何本地感悟與個人筆記。</p>
 
-        <h2>2. 定位權限與即時天氣服務（平台細分）</h2>
-        <p>當您開啟應用內的「即時天氣」功能或使用桌面小工具時，本應用會向您請求<strong>地理位置（定位）權限</strong>。我們在不同平台及組件中的處理邏輯如下：</p>
+        <h2>三、 AI 思想對話服務與服務端數據安全防護體系</h2>
+        <p>當您開啓並使用本應用內的 <strong>AI 思想對話功能</strong> 時，涉及客户端與遠端服務器的安全網絡交互，我們制定了行業頂尖的數據安全與防泄露機制：</p>
+
+        <h3>3.1 匿名授信機制（絕對不收集真實個人身份信息）</h3>
+        <p>為建立安全的網絡通信鏈路，系統在初始化連接時僅分配並保存高度匿名的密文設備授信標識（Device UUID / Token）。<span
+                class="legal-highlight">我們嚴正承諾：絕不獲取、收集、記錄或綁定用户的真實姓名、身份證號、手機號碼、電子郵箱、通訊錄、地理位置軌跡或硬件敏感識別碼（如 IMEI、IDFA、MAC
+                地址）。</span></p>
+
+        <h3>3.2 全鏈路加密與服務端密文存儲防泄露承諾</h3>
+        <p>為確保數據在傳輸與存儲全過程的絕對安全，我們構建了以下多重防護體系：</p>
         <ul>
-            <li><strong>Android 裝置：</strong>本應用 Android 版本暫不提供天氣服務，因此在 Android 裝置上，本應用不請求任何位置權限，亦不收集或處理任何地理定位數據。</li>
-            <li><strong>iOS 裝置與桌面小工具（Widget）：</strong>
-                <ul>
-                    <li><strong>主應用程式與小工具通信：</strong>當您在 iOS 系統中啟用本應用時，經緯度資訊會以高度安全的本機 App Group 共享機制（Suite: <code>group.xyz.tinglo.Mao4App</code>）在裝置本機的 <code>UserDefaults</code> 中同步，以便桌面小工具（MaoWidget）能即時讀取。該數據完全留存在裝置本機。</li>
-                    <li><strong>小工具背景重新整理：</strong>iOS 桌面小工具會在系統排程的背景重新整理期間，讀取此本機經緯度，並直接在小工具進程中向 Open-Meteo API 發起加密 HTTPS 網絡請求以更新桌面小工具的溫度和空氣品質。</li>
-                </ul>
+            <li><strong>傳輸層加密（TLS 1.3）：</strong>所有客户端與服務器之間的網絡通信均強制採用 TLS 1.3 / HTTPS
+                高強度端到端加密通道傳輸，徹底杜絕數據在公共網絡環境中的中途截獲或篡改。</li>
+            <li><strong>服務端存儲加密（Ciphertext Only）：</strong><span
+                    class="legal-highlight">即使部分必要的授信狀態或會話上下文需要暫存於服務端，服務器保存的所有數據均經過 AES-256
+                    高強度不可逆算法進行密文加密存儲。即使服務器遭遇極端的外部物理攻擊或未經授權的非法訪問，所有數據依然為無法解密、無法識別的無序密文，天然不具備泄露個人真實隱私的可能。</span></li>
+            <li><strong>會話即時性與非保留原則：</strong>對話交互輸入與響應生成僅用於大模型即時推導計算，會話數據僅保留於即時上下文窗口中，絕不上報或合併至任何第三方廣告畫像庫、數據追蹤分析庫或商業營銷數據庫。
             </li>
-            <div class="highlight">
-                <p><strong>🚨 特別說明與承諾：</strong>「即時天氣」及「桌面小工具（Widget）背景天氣同步」功能<strong>僅在 iOS 裝置上提供與支持</strong>，Android 裝置暫不提供天氣服務。我們絕對不在任何外部雲端伺服器上收集、記錄、儲存或回傳您的位置軌跡、歷史定位資訊。您的經緯度數據絕不與您的任何裝置識別碼（如 IDFA/IMEI）或個人身分進行綁定。</p>
-            </div>
         </ul>
 
-        <h2>3. 其他裝置權限的使用</h2>
-        <p>為了給您提供高品質的使用體驗，本應用還可能會在必要時請求並使用以下硬體權限或通知通道：</p>
+        <h3>3.3 授權前置與協議確認邏輯</h3>
+        <p>App 在未獲得用户明確勾選確認同意《用户服務協議與隱私聲明》前，系統被嚴格限制不得與服務端建立任何網絡握手或註冊匿名賬號。用户未同意協議前，AI 思想對話連接功能保持完全關閉狀態。</p>
+
+        <div class="line-box">
+            <div class="line-box-title">數據安全與防泄露法律承諾</div>
+            <p>我們鄭重保證：本應用數據傳輸與服務端存儲均實施嚴格的密文加密防護，且不包含任何可識別個人身份的信息。因本應用數據結構天然具有匿名性與高強度加密性，不存在導致用户個人隱私泄露的法律風險。</p>
+        </div>
+
+        <h2>四、 AI 算法響應性質免責聲明</h2>
+        <p>4.1 本應用 AI 思想對話功能基於大語言模型算法與文獻索引技術構建，旨在為廣大的文化愛好者與學者提供思想探討、歷史文獻研讀與學術交流輔助。</p>
+        <p>4.2 <span class="legal-highlight">算法響應免責説明：</span>AI
+            思想對話中生成的所有回覆均由大語言模型即時推導生成，僅供學術思考、文化研讀與日常交流參考，不代表開發者的政治立場、官方觀點或絕對事實結論。對話內容在任何情況下均不構成任何法律、醫療、投資、心理諮詢或專業學術終局判定。
+        </p>
+
+        <h2>五、 用户合規使用承諾與違規內容處置</h2>
+        <p>5.1 用户在使用本應用（尤其是 AI 思想對話功能）時，須嚴格遵守國家相關法律法規與公序良俗，堅持正確的歷史觀、民族觀與價值觀。</p>
+        <p>5.2 用户承諾絕不利用本應用及 AI 對話服務從事以下活動：</p>
         <ul>
-            <li><strong>通知權限（Local Notifications）：</strong>用於實現每日上午的「早安推送」提醒。該通知的觸發、渲染與管理完全在您裝置本機由系統原生通知引擎排程執行，整個流程完全不需要網絡連接，亦不向外發送任何數據。</li>
-            <li><strong>觸覺回饋權限（Haptics）：</strong>用於在您長按、點擊或切換主題卡片時提供震動回饋，以實現極佳的原生互動手感。該權限僅限在硬體層互動，不涉及任何數據的讀取和存留。</li>
+            <li>生成、誘導、儲存或傳播煽動顛覆國家政權、危害國家安全、破壞國家統一的言論；</li>
+            <li>生成、誘導或傳播散佈謠言、虛假信息、暴力、恐怖、色情或賭博的內容；</li>
+            <li>生成、誘導或傳播侮辱、誹謗他人，侵犯他人名譽權、隱私權或知識產權的文本；</li>
+            <li>利用自動化技術手段對本應用服務器接口發起惡意攻擊、反編譯、破解或超載請求。</li>
         </ul>
+        <p>5.3 若用户違反上述承諾，我們有權立即採取中斷連接、限制 AI 對話功能、註銷匿名授信 Token 等措施，並保留配合司法機關追究相關法律責任的權利。</p>
 
-        <h2>4. 第三方 SDK 與數據安全</h2>
-        <p>本應用<strong>沒有整合</strong>任何第三方商業廣告 SDK、用戶追蹤分析系統（例如 Google Analytics、Firebase、Flurry）或者社交平台一鍵分享組件。沒有任何第三方機構能夠以自動化方式透過本應用獲取或收集您的任何偏好或個人數據。</p>
+        <h2>六、 系統設備權限與平台差異細則</h2>
+        <p>6.1 <strong>定位權限（僅限支持天氣的平台）：</strong>僅當用户在 iOS 設備上主動開啓實時天氣功能時，經用户授權後獲取模糊經緯度，且該定位數據僅存留於本地 App Group
+            共享區供桌面小組件獲取氣象信息。Android 設備及不支持天氣的版本絕不請求或收集任何定位權限。</p>
+        <p>6.2 <strong>本地通知權限（Local Notifications）：</strong>用於每日推送温馨提示。通知觸發邏輯 100% 在系統本地調度，無需連接外網，不向外發送任何數據。</p>
+        <p>6.3 <strong>觸覺反饋與相冊寫入權限：</strong>觸覺反饋僅在硬件層提供震動反饋；相冊權限僅在用户主動點擊“保存卡片”時調用系統接口將圖片寫入相冊，絕不讀取用户的相冊私密照片。</p>
 
-        <h2>5. OTA 自動更新檢測</h2>
-        <p>本應用內置了輕量級的 OTA 版本檢測機制。當檢測更新時，應用會訪問雲端的靜態配置檔案（經過 AES 對稱加密的 JSON 包）。整個過程僅對比用戶端的版本號，不收集、不追蹤您的裝置硬體特徵。若裝置處於離線狀態，則自動忽略更新，不干擾您的日常使用。</p>
+        <h2>七、 嚴禁第三方廣告與數據追蹤</h2>
+        <p>7.1 本應用始終堅持純粹的用户體驗，<strong>未集成任何第三方商業廣告 SDK</strong>。</p>
+        <p>7.2 本應用<strong>未集成任何第三方行為分析或用户追蹤 SDK</strong>（如 Google Analytics、Firebase、Flurry
+            等），絕不跨應用追蹤用户的設備標識符（IDFA/IMEI）。</p>
 
-        <h2>6. 兒童隱私保護說明</h2>
-        <p>我們非常重視對未成年人隱私的保護。由於本應用不建立用戶帳戶系統，我們亦不主動向任何人收集任何個人數據。如果家長有合理理由懷疑我們在無意中獲得了未成年人的隱私數據，請透過以下方式聯絡我們，我們將立即協助您核實並清除本機配置。</p>
+        <h2>八、 知識產權與免責限制</h2>
+        <p>8.1 本應用的所有視覺設計、代碼架構、UI 界面佈局、軟件著作權及相關技術專利均歸開發者所有，受中華人民共和國法律及國際知識產權條約保護。</p>
+        <p>8.2 <span class="legal-highlight">不可抗力與服務變更免責：</span>因不可抗力（如電信部門技術調整、國家政策管控變革、大規模網絡攻擊、服務器遭不可抗因素破壞等）導致 AI
+            思想對話服務暫停或中斷的，開發者在法律允許的最大範圍內免於承擔違約責任，但將盡可能提前予以公告。</p>
 
-        <h2>7. 政策修訂</h2>
-        <p>在添加新功能或遵循相關法律政策時，我們可能會不時對本隱私政策進行小幅更新。任何修訂一經本頁面公布即時生效，建議您定期關注。對於原生系統權限的重大變更，我們會在應用內顯著提示並徵求您的明確同意。</p>
+        <h2>九、 未成年人隱私保護説明</h2>
+        <p>我們極其重視未成年人的個人信息保護。由於本應用不要求註冊個人身份賬號，我們不會主動收集未成年人的個人數據。若監護人發現未成年人在未獲得監護人同意的情況下使用了本應用，可以通過以下方式聯繫我們，我們將全力配合保障未成年人的合法權益。
+        </p>
 
-        <h2>8. 開發者聯絡方式</h2>
-        <p>如果您對本隱私政策或應用中的權限調用有任何問題、意見或改進建議，歡迎隨時與我們取得聯絡：</p>
-        <p><strong>Email: alennaur@163.com</strong></p>
+        <h2>十、 協議變更、法律管轄與聯繫方式</h2>
+        <p>10.1 本協議的訂立、執行、解釋及爭議解決均適用中華人民共和國法律。</p>
+        <p>10.2 我們可能會根據技術演進或法規要求適時修訂本協議。修訂後的文件將公佈於官方網頁。若您繼續使用本應用，即表示接受修訂後的協議內容。</p>
+        <p>10.3 如您對本協議、數據安全保障或隱私政策有任何法律疑問、意見或投訴，請通過以下官方郵箱與我們聯繫：</p>
+        <p style="font-weight: 700; color: var(--text-main); font-size: 15px; margin-top: 12px;">
+            官方法律與隱私聯繫郵箱：alennaur@163.com</p>
 
         <div class="footer">
-            &copy; 2026 李安. 保留所有權利。<br>
-            最後更新日期：2026年7月
+            &copy; 2026 毛選日曆開發者. 保留所有權利。<br>
+            文件版本：v2.0
         </div>
     </div>
 </body>
+
 </html>
