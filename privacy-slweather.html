@@ -1,165 +1,355 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>隐私协议 - 工匠天气 Artisan Weather</title>
-    <style>
-        :root {
-            --bg-color: #F2F2F5;
-            --card-bg: #FFFFFF;
-            --text-main: #333333;
-            --text-sub: #666666;
-            --accent: #888888;
-        }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="工匠天气用户协议与隐私政策，说明定位、天气与空气质量数据的使用方式。">
+  <meta name="color-scheme" content="light dark">
+  <title>用户协议与隐私政策 - 工匠天气</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --background: #F2F2F2;
+      --text: #333333;
+      --secondary: #666666;
+      --tertiary: #6E6E73;
+      --line: rgba(51, 51, 51, 0.14);
+      --focus: #8a5a00;
+    }
 
-        body {
-            background-color: var(--bg-color);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            color: var(--text-main);
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-        }
+    * {
+      box-sizing: border-box;
+    }
 
-        .container {
-            max-width: 800px;
-            width: 100%;
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Microsoft YaHei", sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+      letter-spacing: 0;
+    }
 
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-            border-bottom: 1px solid #EEE;
-            padding-bottom: 20px;
-        }
+    a {
+      color: inherit;
+      text-decoration-color: var(--tertiary);
+      text-underline-offset: 3px;
+    }
 
-        h1 {
-            font-size: 26px;
-            margin: 0;
-            color: var(--text-main);
-            font-weight: 600;
-        }
+    a:hover {
+      text-decoration-thickness: 2px;
+    }
 
-        .app-name {
-            color: var(--accent);
-            font-size: 14px;
-            margin-top: 5px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-        }
+    a:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
 
-        section {
-            margin-bottom: 30px;
-        }
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 1;
+      padding: 6px 10px;
+      background: var(--background);
+      border: 1px solid var(--line);
+      transform: translateY(-160%);
+    }
 
-        h2 {
-            font-size: 18px;
-            border-left: 5px solid var(--accent);
-            padding-left: 15px;
-            margin-bottom: 15px;
-            color: var(--text-main);
-        }
+    .skip-link:focus {
+      transform: translateY(0);
+    }
 
-        p {
-            font-size: 15px;
-            color: var(--text-sub);
-            margin-bottom: 10px;
-            text-align: justify;
-        }
+    .page {
+      width: calc(100% - 40px);
+      max-width: 720px;
+      margin: 0 auto;
+    }
 
-        ul {
-            padding-left: 20px;
-            color: var(--text-sub);
-            font-size: 15px;
-        }
+    header {
+      padding: clamp(38px, 8vw, 72px) 0 30px;
+      border-bottom: 1px solid var(--line);
+    }
 
-        li {
-            margin-bottom: 8px;
-        }
+    .brand {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
 
-        .contact-info {
-            background: var(--bg-color);
-            padding: 15px;
-            border-radius: 15px;
-            font-family: monospace;
-            color: var(--text-main);
-            display: inline-block;
-        }
+    .app-icon {
+      display: block;
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+    }
 
-        footer {
-            text-align: center;
-            font-size: 13px;
-            color: #AAA;
-            margin-top: 50px;
-            border-top: 1px solid #EEE;
-            padding-top: 20px;
-        }
+    h1,
+    h2,
+    h3,
+    h4 {
+      line-height: 1.4;
+      letter-spacing: 0;
+      text-wrap: balance;
+    }
 
-        @media (max-width: 600px) {
-            .container {
-                padding: 25px;
-                border-radius: 20px;
-            }
-            h1 { font-size: 22px; }
-        }
-    </style>
+    h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 650;
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      font-size: 24px;
+      font-weight: 650;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      font-weight: 650;
+    }
+
+    h4 {
+      margin: 0 0 4px;
+      font-size: 16px;
+      font-weight: 650;
+    }
+
+    p,
+    ul {
+      margin-top: 0;
+      text-wrap: pretty;
+    }
+
+    ul {
+      padding-left: 1.25em;
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    .updated {
+      margin: 3px 0 0;
+      color: var(--tertiary);
+      font-size: 14px;
+    }
+
+    .intro {
+      padding: 28px 0 4px;
+      color: var(--secondary);
+    }
+
+    main {
+      padding-bottom: 56px;
+    }
+
+    article {
+      padding-top: 42px;
+    }
+
+    article + article {
+      margin-top: 42px;
+      border-top: 1px solid var(--line);
+    }
+
+    section + section {
+      margin-top: 34px;
+    }
+
+    .lead,
+    .note {
+      color: var(--secondary);
+    }
+
+    .entry + .entry {
+      margin-top: 18px;
+    }
+
+    .entry p {
+      margin-bottom: 0;
+      color: var(--secondary);
+    }
+
+    .contact-link {
+      font-weight: 650;
+    }
+
+    footer {
+      padding: 24px 0 42px;
+      border-top: 1px solid var(--line);
+      color: var(--tertiary);
+      font-size: 13px;
+    }
+
+    footer p {
+      margin: 2px 0;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background: #292B30;
+        --text: #F0F0F2;
+        --secondary: #B7B8BD;
+        --tertiary: #A3A5AB;
+        --line: rgba(240, 240, 242, 0.14);
+        --focus: #FFD700;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .page {
+        width: calc(100% - 32px);
+      }
+
+      header {
+        padding-top: 34px;
+      }
+
+      .app-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 11px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      article {
+        padding-top: 36px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>隐私政策</h1>
-            <div class="app-name">Artisan Weather / 工匠天气</div>
-        </header>
+  <a class="skip-link" href="#content">跳到正文</a>
 
-        <section>
-            <h2>1. 引言</h2>
-            <p>感谢您选择“工匠天气”（以下简称“本应用”）。本应用由开发者 <strong>李安</strong> 个人提供。我们深知个人信息对您的重要性，并承诺通过本政策向您阐述我们如何通过极致简约的方式保护您的隐私。</p>
+  <div class="page">
+    <header>
+      <div class="brand">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="./assets/images/icon-dark.png">
+          <img class="app-icon" src="./assets/images/icon.png" width="48" height="48" alt="工匠天气图标">
+        </picture>
+        <div>
+          <h1>用户协议与隐私政策</h1>
+          <p class="updated">工匠天气 · 更新于 2026 年 9 月 16 日</p>
+        </div>
+      </div>
+    </header>
+
+    <main id="content">
+      <div class="intro">
+        <p>工匠天气由个人开发者李安提供。应用不要求注册账号，不接入广告、行为分析或跨应用跟踪服务。</p>
+        <p>定位权限是可选的。拒绝定位后，您仍可手动添加城市并查看天气。</p>
+      </div>
+
+      <article aria-labelledby="privacy-title">
+        <h2 id="privacy-title">隐私政策</h2>
+        <p class="lead">本政策适用于工匠天气 iOS 应用及本页面。第三方服务的处理活动同时受其独立政策约束。</p>
+
+        <section aria-labelledby="privacy-data">
+          <h3 id="privacy-data">我们处理的信息</h3>
+
+          <div class="entry">
+            <h4>位置与坐标</h4>
+            <p>仅在您授权后读取，用于确定当前位置、解析城市名称并查询天气与空气质量。坐标会按功能需要发送给 Apple 和 Open-Meteo。</p>
+          </div>
+
+          <div class="entry">
+            <h4>城市、设置与天气缓存</h4>
+            <p>手动添加的城市、温标、主题、语言、城市顺序和天气缓存保存在设备应用沙盒与 App Group 中，用于恢复界面状态、离线展示和桌面小组件。</p>
+          </div>
+
+          <div class="entry">
+            <h4>网络与技术数据</h4>
+            <p>第三方服务可能为完成请求、保障安全和排查故障处理 IP 地址、请求时间及必要日志；开发者不会通过应用直接取得这些日志。</p>
+          </div>
+
+          <div class="entry">
+            <h4>您主动发送的邮件</h4>
+            <p>邮件仅用于答复反馈、隐私请求或技术支持问题，并在解决问题或满足法定义务所需期间保留。</p>
+          </div>
         </section>
 
-        <section>
-            <h2>2. 信息收集与使用</h2>
-            <p>本应用的核心使命是为您展示精准的天气。为此，我们需要且仅需要以下信息：</p>
-            <ul>
-                <li><strong>地理位置：</strong> 我们需要获取您的经纬度信息以请求当地气象数据。该数据仅在您使用应用期间通过加密通道传输给受信任的第三方气象接口（如 WeatherKit），我们不会将其记录在远程服务器。</li>
-                <li><strong>本地配置：</strong> 您的城市列表、温标偏好（°C/°F）均存储在您的设备本地。</li>
-            </ul>
+        <section aria-labelledby="privacy-location">
+          <h3 id="privacy-location">定位权限</h3>
+          <p>当前版本仅在您选择查看当前位置天气时请求“使用 App 时”的定位权限。您可以在系统设置中随时关闭权限；关闭后，先前保存在本地的天气缓存可能继续保留至被更新、删除或应用卸载。</p>
         </section>
 
-        <section>
-            <h2>3. 数据安全</h2>
-            <p>我们采用行业标准的加密技术（HTTPS/TLS）来保护数据传输。作为一个纯粹的工具应用，我们不设置用户账号系统，从源头上避免了云端数据库泄露用户身份信息的风险。</p>
+        <section aria-labelledby="privacy-services">
+          <h3 id="privacy-services">第三方服务</h3>
+          <ul>
+            <li><strong>Apple WeatherKit、Core Location 与反向地理编码</strong>用于定位、地名解析和天气预报。Apple 表示，为提供天气预报而处理的位置不会与可识别个人身份的信息关联。相关说明见 <a href="https://www.apple.com/legal/privacy/data/zh-cn/weather/" target="_blank" rel="noopener noreferrer">天气与隐私</a>、<a href="https://www.apple.com/legal/privacy/data/zh-cn/location-services/" target="_blank" rel="noopener noreferrer">定位服务与隐私</a>和 <a href="https://weatherkit.apple.com/legal-attribution.html" target="_blank" rel="noopener noreferrer">WeatherKit 法律归属说明</a>。</li>
+            <li><strong>Open-Meteo</strong>用于查询空气质量。请求包含查询位置的经纬度，服务方也可能因运维和防滥用处理 IP 地址。其政策说明排障日志可能包含坐标，并会在 90 天后删除。详情见 <a href="https://open-meteo.com/en/terms" target="_blank" rel="noopener noreferrer">条款与隐私说明</a>。</li>
+            <li><strong>网页托管方</strong>可能按其政策处理基础访问日志。本页面不主动设置 Cookie，也不接入分析或广告脚本。</li>
+          </ul>
+          <p>除实现上述功能、响应您的请求或履行法律义务所必需的情形外，我们不会出售、出租或向广告平台披露您的个人信息，也不会将其用于跨应用跟踪。</p>
         </section>
 
-        <section>
-            <h2>4. 第三方服务声明</h2>
-            <p>本应用集成的气象服务提供商仅在获得授权后处理您的位置请求。我们保证不会与任何广告平台分享您的位置数据，也不进行任何形式的精准广告推送。</p>
+        <section aria-labelledby="privacy-retention">
+          <h3 id="privacy-retention">保存、删除与您的选择</h3>
+          <ul>
+            <li>城市、设置和天气缓存通常保留至您删除相应城市、数据被新缓存覆盖或卸载应用。</li>
+            <li>桌面小组件所需数据保存在应用与小组件共用的 App Group 容器中。</li>
+            <li>您可以在城市管理中删除手动添加的城市；卸载应用可删除应用保存的本地数据。</li>
+            <li>第三方服务的日志保存期限以其政策为准；Open-Meteo 当前说明的个体日志期限为 90 天。</li>
+            <li>如需查阅、更正或删除您主动发送给开发者的邮件信息，请通过文末邮箱联系。</li>
+          </ul>
         </section>
 
-        <section>
-            <h2>5. 撤回授权</h2>
-            <p>您可以随时通过系统设置关闭“工匠天气”的定位权限。在这种情况下，您仍然可以通过手动搜索功能，以“工匠”的方式精准管理您关心的城市天气。</p>
+        <section aria-labelledby="privacy-other">
+          <h3 id="privacy-other">安全、未成年人及政策更新</h3>
+          <p>应用使用操作系统沙盒、App Group 权限边界及 HTTPS 等措施保护数据，不运营用于保存应用用户资料的自建后端服务器。互联网传输和电子存储无法保证绝对安全。</p>
+          <p>工匠天气不面向未满 14 周岁儿童提供专门服务，也不主动收集姓名、年龄或账号资料。未成年人应在监护人指导下使用。</p>
+          <p>当功能、第三方服务或法律要求发生变化时，我们可能更新本政策，并在本页面标注新的日期；重大变化会通过适当方式提示。</p>
+        </section>
+      </article>
+
+      <article aria-labelledby="terms-title">
+        <h2 id="terms-title">用户协议</h2>
+        <p class="lead">下载、安装或使用工匠天气，即表示您已阅读并同意本协议。若不同意，请停止使用并卸载应用。</p>
+
+        <section aria-labelledby="terms-service">
+          <h3 id="terms-service">服务内容</h3>
+          <p>工匠天气提供当前天气、逐小时与逐日预报、空气质量、多城市管理、桌面小组件及相关展示功能。实际功能可能因设备、系统版本、地区、网络状况和第三方数据可用性而不同。</p>
         </section>
 
-        <section>
-            <h2>6. 联系我们</h2>
-            <p>如果您对本协议或您的数据安全有任何疑问，请通过以下方式直接联系开发者：</p>
-            <div class="contact-info">
-                Email: allennaur@163.com
-            </div>
+        <section aria-labelledby="terms-data">
+          <h3 id="terms-data">天气信息的适用范围</h3>
+          <p>天气和空气质量数据来自第三方并具有预测性，可能存在延迟、缺失或误差。应用内容仅供日常参考，不构成应急、医疗、航海、航空、农业生产或其他涉及人身与财产安全的专业建议。重要场景请同时参考当地主管部门发布的信息。</p>
         </section>
 
-        <footer>
-            <p>最近更新日期：2026年03月16日</p>
-            <p>版权所有 © 2026 <strong>李安</strong></p>
-            <p>All Rights Reserved for Artisan Weather</p>
-        </footer>
-    </div>
+        <section aria-labelledby="terms-use">
+          <h3 id="terms-use">使用规则与知识产权</h3>
+          <p>您应合法、合理地使用本应用，不得利用应用从事违法活动或恶意干扰应用、第三方接口及相关基础设施。</p>
+          <p>应用名称、界面、程序和自有素材的权利归开发者或合法权利人所有；第三方数据、商标和素材的权利归各自权利人所有。若您通过 Apple App Store 获取本应用，<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer">Apple 标准最终用户许可协议</a>在适用范围内同时生效。</p>
+        </section>
+
+        <section aria-labelledby="terms-change">
+          <h3 id="terms-change">服务与协议变更</h3>
+          <p>我们可能为改进体验、修复问题或满足合规要求而调整功能。对于因不可抗力、网络故障、系统限制或第三方服务中断造成的暂时不可用，我们会在合理范围内恢复服务，但法律另有强制规定的除外。</p>
+          <p>协议更新后继续使用应用，视为您接受更新内容。争议应先通过联系邮箱友好协商；协商不成的，依适用法律由有管辖权的机构处理。您所在地区的强制性消费者保护规则不受本协议排除。</p>
+        </section>
+      </article>
+
+      <article aria-labelledby="contact-title">
+        <h2 id="contact-title">联系我们</h2>
+        <p>隐私、协议、数据权利或产品问题，可联系开发者李安：</p>
+        <p><a class="contact-link" href="mailto:allennaur@163.com?subject=%E5%B7%A5%E5%8C%A0%E5%A4%A9%E6%B0%94%E9%9A%90%E7%A7%81%E4%B8%8E%E5%8D%8F%E8%AE%AE%E5%92%A8%E8%AF%A2">allennaur@163.com</a></p>
+      </article>
+    </main>
+
+    <footer>
+      <p>工匠天气 · Artisan Weather</p>
+      <p>版权所有 © 2026 李安</p>
+      <p>本页面不构成法律意见；如法律法规另有强制规定，以其规定为准。</p>
+    </footer>
+  </div>
 </body>
 </html>
